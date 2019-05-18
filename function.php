@@ -1,5 +1,5 @@
 <?php
- //================================
+//================================
 // ログ
 //================================
 //ログを取るか
@@ -121,6 +121,8 @@ function validEmailDup($email)
     //array_shift関数は配列の先頭を取り出す関数です。クエリ結果は配列形式で入っているので、array_shiftで1つ目だけ取り出して判定します
     if (!empty(array_shift($result))) {
       $err_msg['email'] = MSG08;
+    } else {
+      $err_msg['email'] = [];
     }
   } catch (Exception $e) {
     error_log('エラー発生:' . $e->getMessage());

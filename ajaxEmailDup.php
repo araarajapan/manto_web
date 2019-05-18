@@ -1,5 +1,3 @@
-
-
 <?php
 //共通変数・関数ファイルを読込み
 require('function.php');
@@ -26,4 +24,3 @@ if (isset($_POST['emailDup'])) {
   echo json_encode($err_msg);
 }
 debug('Ajax処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-?>
